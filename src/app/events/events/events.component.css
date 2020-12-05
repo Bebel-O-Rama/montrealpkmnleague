@@ -1,0 +1,17 @@
+#title {
+  margin-left: 265px;
+  margin-top: 0px;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 3px;
+  font-size: 4ch;
+}
+
+.calendar{
+    width: 48vw;
+    margin-left: 100px;
+    margin-top: 25px;
+    align-self: center;
+    margin-left: 20vw;
+    -webkit-user-drag: none;
+}

@@ -1,0 +1,16 @@
+<button id="profil" mat-raised-button (click)="gotoLink('/profile');" color="primary" style="border-radius: 25px; width: 100px;">Profil</button>
+<h2 id="title">Pokédex</h2> 
+<br>
+<div class="scrollZone">
+    <div class="pokedex">
+        <div class="wrapper">
+            <div #pkmnId *ngFor="let pokemon of pokemons; let index = index;" class="box" [attr.data-indexNb]="index" (click)="ajouterEquipe(pkmnId)">
+                <span style="color: #999;">n° {{ index+1 }}</span> <br>
+                <span style="text-shadow: 2px 2px #111;"> {{ pokemon.name }} </span> <br>
+                <div class="pkmnFrame">
+                    <img src="assets/images/imgPkmns/{{index+1}}.png" alt="{{pokemon.name}}">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

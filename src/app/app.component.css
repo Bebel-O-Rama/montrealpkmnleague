@@ -1,0 +1,119 @@
+#drawer {
+  width: 400px;
+}
+
+#menu {
+  margin-left: 7px;
+}
+
+#title {
+  margin-left: 300px;
+  margin-top: 0px;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 3px;
+  font-size: 4ch;
+}
+
+
+#toolbar {
+  display: flex;
+  justify-content: center;
+
+}
+
+.img-responsive {
+  margin-top: 5px;
+  width: 20px;
+  height: 20px
+}
+
+.mat-toolbar.mat-primary {
+  background: #3681d1;
+  color: rgb(253, 75, 75);
+}
+
+.appTitle {
+  display: inline;
+  justify-content: center;
+  align-items: center;
+  margin-left: 35%;
+}
+
+.connectBouton {
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 20px;
+  max-height: 40px;
+  font-size: 1ch;
+}
+
+.contentContainer {
+  justify-content: center;
+  align-items: center;
+}
+
+#fillerBlock{
+  width: auto;
+  background-image: "assets/images/MainFrameTop.PNG";
+  background-repeat: repeat;
+}
+
+::marker() {
+  visibility: hidden;
+}
+
+.example-container {
+    width: 100%;
+    height: 100%;
+    background-color: transparent ;
+    /* border: 1px solid rgba(0, 0, 0, 0.5); */
+  }
+  
+  /* .example-sidenav-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } */
+
+  .titleBar{
+    color:basic;
+  }
+  
+  .example-sidenav {
+    padding: 20px;
+  }
+
+
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .listItem {
+    border-bottom: 1px solid black;
+  }
+
+  .invisible {
+    border-color: transparent;
+    background-color: transparent;
+  }
+
+  .invisible2 {
+    visibility: hidden;
+    background: transparent;
+    border: none !important;
+  }
+  .invisible2:first-child {
+    visibility:visible;
+  }
+
+  .menuItem{
+    text-emphasis: none;
+    text-emphasis-color: initial;
+  }
+
+  .routerOutler{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }

@@ -1,0 +1,64 @@
+<div id="mainContent">
+    <h2 id="title">Profil</h2>   
+
+    <mat-card class = "mainCard" >
+        <div style="clear: left;">
+            <p style="float: left;"><img id="picture" src="/assets/images/pokemonstar.svg" height="200" width="200"></p>
+            <div>
+                <h1 class="t1"><strong>Nom d'utilisateur:</strong> {{username}}</h1>
+            </div>
+            <div>
+                <h3 class="t1"><strong>Date:</strong> {{date}}</h3>
+            </div>
+            <!-- <p></p> -->
+           <button mat-raised-button color="accent" class="icon" (click)="gotoLink('/pokedex');">Pokédex</button>
+           <button mat-raised-button color="basic" class="icon" (click)="gotoLink('/events');">Calendrier</button>
+        </div>
+    </mat-card>
+
+    <div *ngIf="estCombattant()">
+        <mat-card class="pokedex">
+            <h2>Équipe</h2>
+            <div>
+                <li *ngFor="let pkmnNb of team; let i = index;" class="teamMember">
+                    {{ i+1 }}. <img src="/assets/images/imgPkmns/{{pkmnNb+1}}.png" id="pkmn">
+                </li>
+            </div>
+        </mat-card>
+    </div>
+
+    <div id="other">
+        <mat-card id="badge">
+            <h2>Badges</h2>
+            <div id="badgeContainer">
+                <img id="picture" src="/assets/images/pokeball.svg" height="50" width="50">
+                <img id="picture" src="/assets/images/pokeball.svg" height="50" width="50">
+                <img id="picture" src="/assets/images/pokeball.svg" height="50" width="50">
+                <img id="picture" src="/assets/images/pokeball.svg" height="50" width="50">
+            </div>
+            <br>
+            <div id="badgeContainer">
+                <img id="picture" src="/assets/images/pokeball.svg" height="50" width="50">
+                <img id="picture" src="/assets/images/pokeball.svg" height="50" width="50">
+                <img id="picture" src="/assets/images/pokeball.svg" height="50" width="50">
+                <img id="picture" src="/assets/images/pokeball.svg" height="50" width="50">
+            </div>
+        </mat-card>
+        <mat-card id="stats">
+            <h2>Statistiques</h2>
+            <div id="statsContainer">
+                <mat-list role="list">
+                    <mat-list-item role="listitem">
+                        <h3 style="overflow: hidden;">Tournois participés : _________________ </h3>
+                    </mat-list-item>
+                    <mat-list-item role="listitem">
+                        <h3 style="overflow: hidden;">Tournois gagnés : ___________________ </h3>
+                    </mat-list-item>
+                    <mat-list-item role="listitem">
+                        <h3 style="overflow: hidden;">Badges gagnés : ____________________ </h3>
+                    </mat-list-item>
+                </mat-list>
+            </div>
+        </mat-card>
+    </div>
+</div>

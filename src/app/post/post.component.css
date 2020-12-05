@@ -1,0 +1,56 @@
+#mainContent{
+  padding-top:70px;
+  padding-left: 25vw;
+  padding-right: 25vw;
+}
+
+#buttons {
+  display: inline-flex;
+  height: 40px;
+  flex-basis: 100px;
+}
+
+#title {
+  margin-left: 260px;
+  margin-top: 0px;
+  color: white;
+  font-weight: 600;
+  font-size: 4ch;
+  letter-spacing: 3px;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+    padding: 10px;
+
+  }
+  
+  #annuler {
+    border-radius: 25px;
+    margin-right: 175px;
+    margin-left: 20%;
+    padding-right: 3ch;
+    padding-left: 3ch;
+  }
+  
+  #envoyer {
+    border-radius: 25px;
+    margin-bottom: 20px;
+    margin-right: 20vw;
+    padding-right: 3ch;
+    padding-left: 3ch;
+  }
+
+  #check {
+    margin-top: 15px;
+  }
+
+  #date {
+    width: 230px;
+  }

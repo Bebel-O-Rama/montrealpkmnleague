@@ -1,0 +1,42 @@
+<h2 id="title">Inscription</h2>
+
+<section class="login">
+	<form class="login-form">
+		<p></p>
+		<div id="devTool">
+			<h4>Type d'utilisateur (Outil de développement)</h4>
+			<mat-form-field appearance="fill">
+				<mat-label>Choisir un type d'utilisateur</mat-label>
+				<select matNativeControl required>
+					<option value="spectateur" (click)="selectOpt('spectateur')">Spectateur</option>
+					<option value="joueur" (click)="selectOpt('joueur')">Joueur</option>
+					<option value="champion" (click)="selectOpt('champion')">Champion</option>
+					<option value="admin" (click)="selectOpt('admin')">Administrateur</option>
+				</select>
+			</mat-form-field>
+		</div>
+		<div id="inputContainer">
+			<mat-form-field class="login-full-width">
+				<mat-label>Nom d'utilisateur : </mat-label>
+				<input matInput type=text name="username" id="username" [(ngModel)]="username" placeholder="Ex. AshKetchum" required>
+			</mat-form-field>
+	
+			<mat-form-field class="login-full-width">
+				<mat-label>Adresse courriel : </mat-label>
+				<input matInput type="email" name="email" id="email" [(ngModel)]="email" placeholder="Ex. example@courriel.ca" required>
+			</mat-form-field>
+	
+			<mat-form-field class="login-full-width">
+				<mat-label>Mot de passe : </mat-label>
+				<input matInput name="password" type=password id="password" [(ngModel)]="password" required>
+			</mat-form-field>
+	
+			<div class="boutonContainer">
+				<button mat-raised-button id="annuler" (click)="gotoLink('/accueil');" color="flat">Annuler</button>
+				<button mat-raised-button id="connexion" (click)="onClickAction('/profile');" color="accent">Créer</button>
+				<!-- User.Update(password, username, getEstCombattant(value)) -->
+			</div>
+		</div>
+	<br><br><br><br>
+	</form>
+</section>

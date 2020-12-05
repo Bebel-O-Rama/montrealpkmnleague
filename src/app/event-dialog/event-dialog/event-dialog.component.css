@@ -1,0 +1,12 @@
+mat-dialog-actions {
+    display: flex;
+    justify-content: center;
+}
+
+#mainContent {
+    width: 300px;
+}
+
+#primary {
+    border-radius: 25px;
+}

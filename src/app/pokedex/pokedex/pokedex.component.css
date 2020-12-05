@@ -1,0 +1,71 @@
+#profil {
+  float: right;
+  margin-right: 5px;
+}
+
+.scrollZone {
+  height: 70vh;
+  padding-top: 10px;
+  overflow-y: scroll;
+}
+
+.pokedex{
+  size: 1fr;
+  width: max-content;
+  display: initial;
+  place-content: left;
+  overflow-y: visible;
+  background-repeat: repeat-y;
+}
+
+#title {
+  margin-left: 286px;
+  margin-top: 0px;
+  color: white;
+  font-weight: 600;
+  font-size: 4ch;
+  letter-spacing: 3px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 150px);
+    grid-gap: 20px;
+    margin-left: 100px;
+  }
+
+  
+  
+  .box {
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+    padding: 20px;
+    font-size: 150%;
+    grid-template-rows:    repeat(auto-fill, 250px);
+    grid-template-columns: repeat(auto-fill, 250px);
+    height: 150px;
+    background-image: url("/assets/images/pkmnBkg.png");
+    background-size: 100% 100%;
+  }
+
+  .pkmnFrame img {
+    /*margin: (counter(offset)-1)*96 (counter(offset)-1)/30*96 counter(offset)*96 counter(offset)/30*96;*/
+    /* position: 1px*(counter(offset)-1)*96 1px*(counter(offset)-1)/30*96 1px*counter(offset)*96 1px*counter(offset)/30*96; */
+
+    /* object-position: var(--offset)*96 var(--offset)/30*96; */
+    image-rendering: pixelated;
+    height: 3cm;
+    width: 3cm;
+  }
+  
+  .pkmnFrame {
+    width: 96px;
+    height: 96px;
+    display: inline-block;
+    cursor: grab;
+    -webkit-user-drag: none;
+
+    /* width: 48px;
+    height: 48px; */
+  }

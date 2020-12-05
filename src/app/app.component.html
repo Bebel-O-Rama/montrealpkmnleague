@@ -1,0 +1,102 @@
+<!-- <div onload="User.Update(cookieService.get('Username'), cookieService.check('Username'), cookieService.check('IsFighter'))"></div> -->
+<mat-drawer-container class="example-container">
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <mat-list role="list">
+      <mat-list-item role="listitem">
+        <h1 id="menu">Menu</h1>
+      </mat-list-item>
+      
+      <mat-list-item role="listitem" class="listItem"><button class="invisible" routerLink="/" routerLinkActive="active"
+        (click)="drawer.toggle()">Accueil</button></mat-list-item>
+
+        <mat-list-item role="listitem" class="listItem"><button class="invisible" routerLink="/post" routerLinkActive="active"
+          (click)="drawer.toggle()">Publier</button></mat-list-item>
+
+      <div *ngIf="estCo(); then thenBlockMenu else elseBlockMenu"></div>
+      <ng-template #elseBlockMenu>
+        <div style="color: lightgrey; margin-left: 3ch;">Vous n'êtes pas connecté </div>
+        <mat-list-item role="listitem" class="listItem"><button class="invisible" routerLink="/sign-in" routerLinkActive="active"
+          (click)="drawer.toggle()">Connectez-vous</button><span style="color: lightgrey;"> ou </span><button class="invisible" routerLink="/login" routerLinkActive="active"
+          (click)="drawer.toggle()" >Créez un compte</button></mat-list-item>
+      </ng-template>
+      <ng-template #thenBlockMenu>
+        <mat-list-item role="listitem" class="listItem"><button class="invisible" routerLink="/profile" routerLinkActive="active"
+          (click)="drawer.toggle()">Profil</button></mat-list-item>
+        <mat-list-item role="listitem" class="listItem"><button class="invisible" routerLink="/pokedex"
+          routerLinkActive="active" (click)="drawer.toggle()">Pokédex</button></mat-list-item>
+          <div *ngIf="estCombattant()">
+            <mat-list-item role="listitem" class="listItem"><button class="invisible" routerLink="/profile/equipe"
+              routerLinkActive="active" (click)="drawer.toggle()">Équipe</button></mat-list-item>
+          </div>
+      </ng-template>
+
+      <mat-list-item role="listitem" class="listItem"><button class="invisible" routerLink="/events"
+          routerLinkActive="active" (click)="drawer.toggle()">Calendrier & événements</button></mat-list-item>
+      <mat-list-item role="listitem" class="listItem"><button class="invisible" routerLink="/about-us"
+          routerLinkActive="active" (click)="drawer.toggle()">À propos</button></mat-list-item>
+      <mat-list-item role="listitem" class="listItem">&nbsp;&nbsp;<a href="assets/aide.pdf" download (click)="drawer.toggle()" style="cursor: pointer; color: darkblue;" >Aide</a></mat-list-item>
+    </mat-list>
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <mat-toolbar color="primary">
+      <button type="button" mat-icon-button (click)="drawer.toggle()" color="accent">
+        <mat-icon>menu</mat-icon>
+      </button>
+
+      <span class="appTitle">
+
+
+        <button class="invisible2" routerLink="/" routerLinkActive="active">
+          <h3>
+            <img width="16" class="img-responsive" src="assets/images/pokeball.svg">
+            Montreal Pkmn League <img width="16" class="img-responsive" src="assets/images/pokeball.svg">
+          </h3>
+        </button>
+
+      </span>
+      <span class="example-spacer"> </span>
+
+      <div *ngIf="estCo(); then thenBlock else elseBlock"></div>
+      <ng-template #elseBlock>
+        <button mat-flat-button color="accent" class="connectBouton" routerLink="/sign-in" routerLinkActive="active">
+          Connexion
+        </button>
+
+        <button mat-flat-button color="basic" class="connectBouton" routerLink="/login" routerLinkActive="active">
+          Inscription
+        </button>
+      </ng-template>
+
+      <ng-template #thenBlock>
+        <button mat-flat-button color="basic" class="connectBouton" (click)="changeCo(); gotoLink('/')" routerLinkActive="active">
+          Déconnexion
+        </button>
+      </ng-template>
+    </mat-toolbar>
+  </div>
+
+<mat-card class="innerthing">
+  <div>
+    <section style="background-image: url('assets/images/MainFrameTop.PNG'); overflow: visible; background-repeat: repeat-x;" class="contentContainer">
+      <section style="background-image: url('assets/images/MainFrame2.PNG'); overflow: hidden; background-repeat: no-repeat;" class="contentContainer">
+
+
+      <router-outlet class="routerOutler" style="background-image: url('assets/images/MainFrameTop.PNG'); overflow: visible; background-repeat: repeat;">
+  
+  
+      </router-outlet>
+      </section>
+    </section>
+  </div>
+</mat-card>
+
+
+
+</mat-drawer-container>
+
+
+
+<!-- <app-about-us></app-about-us>
+
+<app-sign-in></app-sign-in> -->

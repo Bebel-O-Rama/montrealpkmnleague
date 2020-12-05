@@ -1,0 +1,36 @@
+<h2 id="title">Publication</h2>
+<div id="mainContent">
+    <mat-form-field class="example-full-width">
+      <mat-label>Titre de l'annonce</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Description de l'annonce</mat-label>
+      <textarea matInput></textarea>
+    </mat-form-field>
+
+    <p>
+      <mat-checkbox id="check" [formControl]="disableSelect">Est-ce qu'il s'agit de la création d'un tournoi?</mat-checkbox>
+    </p>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Emplacement du tournoi</mat-label>
+      <input matInput [disabled]="!disableSelect.value" required>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Date du tournoi</mat-label>
+      <input matInput [disabled]="!disableSelect.value" required type="date" id="date">
+    </mat-form-field>
+    <div id="buttons">
+      <div>
+        <button mat-raised-button id="envoyer" (click)="openDialog();" color="accent">  Envoyer  </button>
+      </div>
+      <div>
+        <button mat-raised-button id="annuler" (click)="gotoLink('/accueil');" color="flat">  Annuler  </button>
+      </div>
+    </div>
+    <br><br><br><br>
+  </div>
+

@@ -1,0 +1,22 @@
+<h2 id="title">Équipe</h2>
+<div>
+	
+    <div *ngIf="estCombattant()">
+        <div class="spacer"></div>
+        <mat-card class = "equipe" >
+            <div #teamIdx *ngFor="let pkmnNb of team; let i = index;" class="teamMember" [attr.data-teamPos]="i" style="color: whitesmoke;">
+                {{ i+1 }}. <img src="/assets/images/imgPkmns/{{pkmnNb+1}}.png" id="pkmn" style="height: 10ch; -webkit-user-drag: none;" (click)="retirerEquipe(teamIdx);">
+            </div>
+        </mat-card>
+        <mat-card class = "aide" style="display: inline-block;">
+            <div>
+                Cliquez un pokémon pour le sélectionner. Dans le pokédex, cliquez sur un pokémon pour le retirer de l'équipe. <br><br> Les sélections subséquentes dans le pokédex écraseront les emplacements suivants.
+            </div>
+        </mat-card>
+        <br> <br>
+        <button id="pokedex" mat-raised-button (click)="gotoLink('/pokedex');" color="accent" style="margin-left: 125px; border-radius: 30px; padding-left: 30px; padding-right: 30px;">Modifier l'équipe</button>
+    </div>
+
+</div>
+<div class="spacer"></div>
+<br><br><br><br>

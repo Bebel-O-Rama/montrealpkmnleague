@@ -1,0 +1,29 @@
+
+<h2 id="title">Connexion</h2>
+
+<div id="signinContainer">
+	
+	<form class="sign_in-form">
+		<mat-form-field class="sign_in-full-width">
+			<mat-label>Nom d'utilisateur : </mat-label>
+			<input matInput name="username" type=text id="username" [(ngModel)]="username" placeholder="Ex. AshKetchum" required>
+		</mat-form-field>
+
+		<mat-form-field class="sign_in-full-width">
+			<mat-label>Mot de passe : </mat-label>
+			<input matInput name="password" type=password id="password" [(ngModel)]="password" type="password" required>
+		</mat-form-field>
+
+
+		<div id="boutonContainer">
+			<button mat-raised-button id="annuler" (click)="gotoLink('/accueil');" color="flat">Annuler</button>
+			<button mat-raised-button id="connexion" (click)="onClickAction('/profile');" color="accent">Connexion</button>
+		</div>
+
+		<div *ngIf="!validCred" class="error">
+			<br>
+			Erreur: Le compte n'existe pas ou votre mot de passe est erronné
+		</div>
+		<br><br><br><br>
+	</form>
+</div>

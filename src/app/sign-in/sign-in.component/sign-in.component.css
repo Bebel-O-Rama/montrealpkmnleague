@@ -1,0 +1,78 @@
+
+#signinContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 90px;
+}
+
+#connexion {
+  margin-top: 15px;
+  /* margin-left: 270px;*/
+  float: right; 
+  border-radius: 25px;
+}
+
+#annuler{
+  margin-top: 15px;
+  margin-right: 270px;
+  border-radius: 25px;
+}
+
+
+.mainthing{
+  position: relative;
+}
+
+
+
+.imgmainframe{
+
+  width: 100%;
+}
+
+.innerthing{
+  margin-left: 320px;
+  margin-top: 10px;
+}
+
+.boutonContainer {
+  display: flex;
+}
+
+.error {
+  color: darkred;
+  font-size: medium;
+  margin-left: 20px;
+}
+
+.sign_in-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  align-items: center;
+}
+
+.sign_in-full-width {
+  width: 500px;
+}
+
+.sign_in-button-inner {
+  width: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+sign_in-button-outer {
+  display: inline-block;
+}
+
+#title {
+  margin-left: 250px;
+  margin-top: 0px;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 3px;
+  font-size: 4ch;
+}
